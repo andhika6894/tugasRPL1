@@ -1,0 +1,38 @@
+package bank;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Andhika Revky Fauzi
+ */
+public class Bank {
+
+    /**
+     * @param args the command line arguments
+     */
+	public static void main(String[]args){
+		int saldo = 200000;
+		Scanner scan = new Scanner (System.in);
+		
+                System.out.print("\n MASUKKAN PIN ANDA: ");
+                int pin = scan.nextInt();
+                if (pin==1234){
+		boolean ulang = true;
+		do{
+			System.out.println("\nBANK NASIONAL");
+		
+			System.out.println("\n == MENU UTAMA == ");
+			System.out.println("\n 1. MENABUNG.");
+			System.out.println("\n 2. TARIK TUNAI.");
+                        System.out.println("\n 3. CEK SALDO.");
+                        System.out.println("\n 4. TRANSFER.");
+			System.out.println("\n 0. KELUAR");
+			System.out.print("\n MASUKKAN PILIHAN: ");
+			int menu = scan.nextInt();
+			
+			if(menu==1){
+				System.out.print("\n MASUKKAN UANG: ");
+				int uang = scan.nextInt();
+				saldo = saldo + uang;
+				}
